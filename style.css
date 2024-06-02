@@ -1,0 +1,53 @@
+#introSection {
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#introSection img {
+  width: 300px;
+  border-radius: 10%;
+}
+#text {
+  width: 50%;
+  font-size: x-small;
+  color: rgb(255, 255, 255);
+}
+#text p {
+  font-size: large;
+}
+body {
+  margin: 0 0px;
+  padding: 0 0px;
+  background-color: black;
+}
+.headerSection {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: rgb(26, 25, 39);
+  border-radius: 0;
+  /* margin-bottom: px; */
+  color: white;
+  margin:0;
+}
+#Education {
+  color: rgb(255, 255, 255);
+  margin-top: 100px;
+  font-size: large;
+}
+#Education h3 {
+  color: rgb(255, 255, 255);
+}
+html {
+  background-color: black;
+}
+.container a {
+  text-decoration: none;
+  color: white;
+}
+#Projects a {
+  text-decoration: none;
+  color: white;
+}
