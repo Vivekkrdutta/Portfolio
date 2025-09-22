@@ -5,181 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vivek kr dutta - Game Developer Portfolio</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Press+Start+2P&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
     <link rel="icon" type="image/png" href="./Images/gameIcon.png"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #0d0c22; /* Deep Indigo background */
-            color: #d1d5db;
-        }
-
-        .hero-bg-layer {
-            transition: transform 1s ease;
-        }
-
-        /* Optional subtle parallax effect */
-        #hero .hero-bg-layer {
-            transform: translateY(0);
-        }
-
-        body {
-            scroll-behavior: smooth;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* Hero Section */
-        .hero-bg {
-            background-image: linear-gradient(to bottom, rgba(13,12,34,0.85), rgba(13,12,34,0.95) 70%, rgba(13,12,34,1)),
-                              url('./Images/backiee-298122-landscape.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .accent-gradient {
-            background: linear-gradient(90deg, #c026d3, #7c3aed);
-        }
-
-        .text-gradient {
-            background: linear-gradient(90deg, #f0abfc, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .pixel-text {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1.25rem; /* adjust size for desktop */
-            letter-spacing: 2px; /* retro spacing */
-            color: #f0abfc; /* optional gradient fallback handled via existing .text-gradient */
-            -webkit-font-smoothing: none; 
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(192, 38, 211, 0.1);
-        }
-
-        .project-card-image {
-            transition: transform 0.4s ease;
-        }
-
-        .group:hover .project-card-image {
-            transform: scale(1.05);
-        }
-        
-        /* Typing cursor effect */
-        .typed-cursor {
-            opacity: 1;
-            animation: blink 0.7s infinite;
-        }
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        /* Scroll reveal animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Thumbnail */
-        .thumbnail {
-        width: 150px;
-        cursor: pointer;
-        border: 2px solid #ddd;
-        border-radius: 8px;
-        }
-
-        /* Modal */
-        .modal {
-        display: none; 
-        position: fixed;
-        z-index: 1000;
-        left: 0; top: 0;
-        width: 100%; height: 100%;
-        background: rgba(0,0,0,0.8);
-        }
-
-        .modal-content {
-        margin: 5% auto;
-        display: block;
-        max-width: 80%;
-        border-radius: 10px;
-        }
-
-        .close {
-        position: absolute;
-        top: 15px; right: 30px;
-        color: #fff;
-        font-size: 2rem;
-        font-weight: bold;
-        cursor: pointer;
-        }
-
-    /* Carousel Navigation Buttons */
-    .carousel-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(255, 0, 0, 0.7); /* semi-transparent fuchsia */
-        border: none;
-        border-radius: 50%;
-        width: 3rem;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .carousel-btn:hover {
-        transform: translateY(-50%) scale(1.1);
-        box-shadow: 0 4px 15px rgba(225, 0, 255, 0.4);
-    }
-
-    .carousel-btn-left {
-        left: -1.5rem; /* adjust as needed */
-    }
-
-    .carousel-btn-right {
-        right: -1.5rem; /* adjust as needed */
-    }
-
-    .carousel-btn i {
-        color: white;
-        font-size: 1.25rem;
-    }
-
-    </style>
 </head>
 
-<body class="w-full">
-    <!-- Header -->
+<body>
     <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="header">
-         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-3xl font-bold text-white tracking-wider">VKD</a>
             <div class="hidden md:flex items-center space-x-8 text-gray-300">
                 <a href="#about" class="hover:text-white transition-colors duration-300">About</a>
@@ -191,7 +31,6 @@
                 <i data-lucide="menu" class="h-7 w-7"></i>
             </button>
         </nav>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-slate-900/90 backdrop-blur-sm">
             <a href="#about" class="block py-3 px-6 text-sm text-gray-300 hover:bg-fuchsia-500/20 hover:text-white">About</a>
             <a href="#experience" class="block py-3 px-6 text-sm text-gray-300 hover:bg-fuchsia-500/20 hover:text-white">Experience</a>
@@ -201,305 +40,200 @@
     </header>
 
     <main>
-    <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-
-        <!-- Hero Content -->
-        <div class="relative z-10 text-center px-6">
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-4">Vivek Kumar Dutta</h1>
-            <p class="text-2xl md:text-3xl font-semibold text-gradient mb-12 h-10">
-                <span id="typed-text"></span><span class="typed-cursor">|</span>
-            </p>
-            <a href="#projects" class="accent-gradient text-white font-bold py-4 px-10 rounded-full text-lg 
-            transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-fuchsia-500/40">
-                Explore My Creations
-            </a>
-        </div>
-    </section>
-
-
-
-    <!-- About Section -->
-    <section id="about" class="py-24">
-
-        <!-- Background image -->
-        <div class="absolute inset-0 z-0">
-            <img src="./Images/backiee-298122-landscape.jpg"
-                alt="Hero Background"
-                class="w-full h-full object-cover">
-            <!-- Gradient overlay -->
-            <div class="absolute inset-0 bg-gradient-to-b from-[#0d0c22]/60 via-[#0d0c22]/80 to-[#0d0c22]/100"></div>
-        </div>
-        <div class="container mx-auto px-6 z-10">
-            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20 reveal">
-                <div class="md:w-2/5">
-                    <div class="relative">
-                        <div class="absolute inset-0 accent-gradient rounded-full -rotate-6 transform"></div>
-                        <img src="./Images/profile pic.jpg" alt="Jane Doe" class="relative rounded-full shadow-2xl w-full max-w-sm mx-auto">
-                    </div>
-                </div>
-                <div class="md:w-3/5 text-lg">
-                    <h2 class="text-4xl font-bold text-white mb-6">About Me</h2>
-                    <p class="mb-4 text-gray-300">
-                        Hello! This is Vivek Kumar Dutta, a CS undergrad ( 2022 - 2026) and a Unity Game Developer Enthusiast always looking out for New Game ideas. I have 2+ years of Experience with Unity Engine and 2D & 3D Games including Animations, Programming, Logic Building etc. Fluent in Problem solving & Data Structures and Algorithms.
-                    </p>
-                    <p class="text-gray-300">
-                        My technical toolkit is built around Unity and C#, but I'm always excited to learn new technologies. I believe the best games are born from collaboration, creative problem-solving, and a deep love for the craft.
-                    </p>
-                </div>
+        <section id="hero" class="relative min-h-screen flex items-center justify-center text-center px-6 hero-bg">
+            <div class="relative z-10">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-4">Vivek Kumar Dutta</h1>
+                <p class="text-2xl md:text-3xl font-semibold text-gradient mb-12 h-10">
+                    <span id="typed-text"></span><span class="typed-cursor">|</span>
+                </p>
+                <a href="#projects" class="accent-gradient text-white font-bold py-4 px-10 rounded-full text-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-fuchsia-500/40">
+                    Explore My Creations
+                </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="py-24 bg-black/10">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-white text-center mb-12 reveal">Education</h2>
-
-            <div class="flex flex-col space-y-8 max-w-3xl mx-auto reveal">
-                <!-- Education Item 1 -->
-                <div class="flex flex-col md:flex-row md:items-start gap-4">
-                    <div class="md:w-32 text-gray-400 font-semibold">2022 - Present</div>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-bold text-white">Bachelor of Technology - Computer Science & Engineering</h3>
-                        <p class="text-gray-300">Ramkrishna Mahato Government Engineering College</p>
-                        <p class="text-gray-400 mt-1">Focus on Game Development, AI & Machine Learning, and Software Engineering. Actively involved in student projects and coding competitions.</p>
-                        <p class="text-gray-200 py-1">CGPA - 8</p>
-                    </div>
-                </div>
-
-                <!-- Education Item 2 -->
-                <div class="flex flex-col md:flex-row md:items-start gap-4">
-                    <div class="md:w-32 text-gray-400 font-semibold">2019 - 2021</div>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-bold text-white">Secondary & Higher Secondary Education</h3>
-                        <p class="text-gray-300">DAV Public School</p>
-                        <p class="text-gray-400 mt-1">Focused on Science and Mathematics, building strong analytical and problem-solving skills.</p>
-                        <p class="text-gray-200">Class 10th - 95.6%</p>
-                        <p class="text-gray-200">Class 12th - 93.2%</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="relative bg-black/10">
-        <div class="absolute inset-0 z-0">
-            <img id="projects-bg"
-            src="./Images/backiee-275375-landscape.jpg?q=80&w=1920&auto=format&fit=crop"
-            alt="Projects Background"
-            class="w-full h-full object-cover transform transition-transform duration-1000 ease-out">
-            <div class="absolute inset-0 bg-gradient-to-b from-[#0d0c22]/100 via-[#0d0c22]/50 to-[#0d0c22]/100"></div>
-        </div>
-        <div class="relative z-10 container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-white text-center mb-12 reveal">Experience - Internships</h2>
-
-            <div class="flex flex-col space-y-8 max-w-3xl mx-auto reveal">
-            
-                <!-- Experience Item -->
-                <div class="flex flex-col md:flex-row md:items-start gap-4">
-                    <div class="md:w-60text-gray-400 font-semibold">Oct 2024 to Jan 2025</div>
-                    <div class="flex-1">
-                    <h3 class="text-xl font-bold text-white py-1">Game Developer Intern</h3>
-                    <div class="flex items-center gap-3 mb-2">
-                        <img src="data:image/jpeg;base64,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" alt="Epic Indie Games Logo" class="w-6 h-6 rounded">
-                        <p class="text-gray-300">IDZ Digital Private Ltd.</p>
-                    </div>
-                    <p class="text-gray-400 mb-3">
-                        Intern as Game Developer ( programmer ). Worked on multiple Projects and created overall 10 + Prototypes to be directly integrated with ongoing Projects. Worked mostly on Kids genre of games, inclusive of Painting, working with textures , colors, particle systems etc.
-                    </p>
-
-                    <!-- Certificate Thumbnail -->
-                    <img src="./Images/IDZ.jpg"
-                        alt="IDZ digital Certificate"
-                        class="w-28 cursor-pointer rounded shadow-lg hover:scale-105 transition-transform"
-                        onclick="openModal(`./Images/IDZ.jpg`)">
-                    </div>
-                </div>
-
-                <!-- Experience Item -->
-                <div class="flex flex-col md:flex-row md:items-start gap-4">
-                    <div class="md:w-60text-gray-400 font-semibold">Jun 2025 to Sep 2025</div>
-                    <div class="flex-1">
-                    <h3 class="text-xl font-bold text-white">Game Developer</h3>
-                    <div class="flex items-center gap-3 mb-2">
-                        <img src="data:image/png;base64,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" alt="Epic Indie Games Logo" class="w-6 h-6 rounded">
-                        <p class="text-gray-300">Appzitter technologies llp</p>
-                    </div>
-                    <p class="text-gray-400 mb-3">
-                        Worked as a Game Developer on Card Games including Whist, Bid Whist, and Euchre. Worked on Project Management Skills.
-                    </p>
-
-                    <!-- Certificate Thumbnail -->
-                    <img src="./Images/Appzitter-Certificate.png"
-                        alt="IDZ digital Certificate"
-                        class="w-28 cursor-pointer rounded shadow-lg hover:scale-105 transition-transform"
-                        onclick="openModal(`./Images/Appzitter-Certificate.png`)">
-                    </div>
-                </div>
-
-            </div>
-        </div>
         </section>
 
-        <!-- Modal Popup -->
-        <div id="certModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
-        <span class="absolute top-5 right-8 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
-        <img id="modalImg" src="" alt="Certificate" class="max-h-[90%] max-w-[90%] rounded shadow-2xl">
-        </div>
+        <section id="about" class="py-24 relative overflow-hidden">
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20 reveal">
+                    <div class="md:w-2/5">
+                        <div class="relative">
+                            <div class="absolute inset-0 accent-gradient rounded-full -rotate-6 transform"></div>
+                            <img src="./Images/profile pic.jpg" alt="Vivek Kumar Dutta" class="relative rounded-full shadow-2xl w-full max-w-sm mx-auto">
+                        </div>
+                    </div>
+                    <div class="md:w-3/5 text-lg">
+                        <h2 class="text-4xl font-bold text-white mb-6">About Me</h2>
+                        <p class="mb-4 text-gray-300">
+                            Hello! This is Vivek Kumar Dutta, a CS undergrad (2022 - 2026) and a Unity Game Developer Enthusiast always looking out for new game ideas. I have 2+ years of experience with the Unity Engine and creating 2D & 3D games, including animations, programming, and logic building. Fluent in problem-solving & Data Structures and Algorithms.
+                        </p>
+                        <p class="text-gray-300">
+                            My technical toolkit is built around Unity and C#, but I'm always excited to learn new technologies. I believe the best games are born from collaboration, creative problem-solving, and a deep love for the craft.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Projects section-->
-        <section id="projects" class="relative py-24">
-            <!-- Controls -->
-            <button id="next-btn" 
-                class="carousel-btn carousel-btn-right absolute top-1/2 
-                    -translate-y-1/2 right-0 z-20
-                    bg-gradient-to-l from-red-900/80 to-gray-red/40 
-                    text-white p-4 rounded-l-xl
-                    hover:from-fuchsia-700 hover:to-fuchsia-500 
-                    transition-all duration-300 disabled:opacity-40">
-                <i data-lucide="chevron-right" class="w-10 h-10"></i>
-            </button>
+        <section id="education" class="py-24 bg-black/10">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-white text-center mb-12 reveal">Education</h2>
+                <div class="max-w-3xl mx-auto space-y-8 reveal">
+                    <div class="flex flex-col md:flex-row md:items-start gap-4">
+                        <div class="md:w-32 text-gray-400 font-semibold">2022 - Present</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-white">B.Tech - Computer Science & Engineering</h3>
+                            <p class="text-gray-300">Ramkrishna Mahato Government Engineering College</p>
+                            <p class="text-gray-400 mt-1">Focus on Game Development, AI & Machine Learning, and Software Engineering. Actively involved in student projects and coding competitions.</p>
+                            <p class="text-gray-200 py-1">CGPA - 8</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-start gap-4">
+                        <div class="md:w-32 text-gray-400 font-semibold">2019 - 2021</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-white">Secondary & Higher Secondary Education</h3>
+                            <p class="text-gray-300">DAV Public School</p>
+                            <p class="text-gray-400 mt-1">Focused on Science and Mathematics, building strong analytical and problem-solving skills.</p>
+                            <p class="text-gray-200">Class 10th - 95.6% | Class 12th - 93.2%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <button id="prev-btn" 
-                class="carousel-btn carousel-btn-left absolute top-1/2 
-                    -translate-y-1/2 left-0 z-20
-                    bg-gradient-to-r from-red-900/80 to-gray-red/40 
-                    text-white p-4 rounded-r-xl
-                    hover:from-fuchsia-700 hover:to-fuchsia-500 
-                    transition-all duration-300 disabled:opacity-40">
-                <i data-lucide="chevron-left" class="w-10 h-10"></i>
-            </button> 
+        <section id="experience" class="py-24 relative overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img id="projects-bg"
-                src="./Images/backiee-122217-landscape.jpg?q=80&w=1920&auto=format&fit=crop"
-                alt="Projects Background"
-                class="w-full h-full object-cover transform transition-transform duration-1000 ease-out">
-                <div class="absolute inset-0 bg-gradient-to-b from-[#0d0c22]/100 via-[#0d0c22]/50 to-[#0d0c22]/100"></div>
+                <img src="./Images/backiee-275375-landscape.jpg" alt="Experience Background" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-b from-[#0d0c22] via-[#0d0c22]/80 to-[#0d0c22]"></div>
             </div>
-
-            <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-bold text-white text-center mb-16 reveal">Top Projects & Samples</h2>
-
-                <div id="carousel-container" class="relative reveal max-w-3xl mx-auto">
-                <div class="overflow-visible relative">
-                    <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out items-center">
-
-
-                    <!-- Slide 1 -->
-                    <div class="carousel-slide flex-none w-full max-w-2xl mx-auto px-4 transition-all duration-500">
-                        <div class="card group rounded-2xl overflow-hidden h-full flex flex-col bg-gray-900/40 backdrop-blur-md shadow-lg">
-                        <div class="overflow-hidden">
-                            <img src="https://github.com/Vivekkrdutta/Battle-Royal-Polygons/raw/main/Images/Screenshot%20(237).png"
-                            alt="Battle Royal : Polygon Edition"
-                            class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-2xl font-bold text-white mb-3">Battle Royal : Polygon Edition</h3>
-                            <p class="text-gray-300 mb-4 flex-grow">
-                            Traditional Battle Royal Multiplayer Game combined with the tweak of Polygons styled art! Try it out with your friends now!
+            <div class="relative z-10 container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-white text-center mb-12 reveal">Experience - Internships</h2>
+                <div class="max-w-3xl mx-auto space-y-12 reveal">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/3 text-gray-400 font-semibold">Oct 2024 - Jan 2025</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-white">Game Developer Intern</h3>
+                            <p class="text-gray-300 mb-2">IDZ Digital Private Ltd.</p>
+                            <p class="text-gray-400 mb-4">
+                                Worked on multiple projects creating 10+ prototypes for kids' games, focusing on painting, textures, colors, and particle systems.
                             </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-fuchsia-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Multiplayer</span>
-                            <span class="bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Action</span>
-                            <span class="bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Shooting</span>
-                            </div>
-                            <div class="flex justify-end gap-3 mt-auto">
-                            <a href="https://github.com/Vivekkrdutta/Battle-Royal-Polygons"
-                                class="text-gray-300 hover:text-fuchsia-400 transition-colors"><i data-lucide="github"></i></a>
-                            <a href="https://thepelicanpresents.itch.io/battle-royal-polygon-edition"
-                                class="text-gray-300 hover:text-fuchsia-400 transition-colors"><i data-lucide="external-link"></i></a>
-                            </div>
-                        </div>
+                            <img src="./Images/IDZ.jpg" alt="IDZ Digital Certificate" class="w-28 cursor-pointer rounded shadow-lg hover:scale-105 transition-transform" onclick="openModal('./Images/IDZ.jpg')">
                         </div>
                     </div>
-
-                    <!-- Slide 2 -->
-                    <div class="carousel-slide flex-none w-full max-w-2xl mx-auto px-4 transition-all duration-500">
-                        <div class="card group rounded-2xl overflow-hidden h-full flex flex-col bg-gray-900/40 backdrop-blur-md shadow-lg">
-                        <div class="overflow-hidden">
-                            <img src="./Images/KitchenChos.png"alt="Kitchen Chaos"
-                            class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-2xl font-bold text-white mb-3">Kitchen Chaos - Again</h3>
-                            <p class="text-gray-300 mb-4 flex-grow">
-                                Manage a restaurant and serve customers efficiently in this fun multiplayer simulation game.
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/3 text-gray-400 font-semibold">Jun 2025 - Sep 2025</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-white">Game Developer</h3>
+                            <p class="text-gray-300 mb-2">Appzitter Technologies LLP</p>
+                            <p class="text-gray-400 mb-4">
+                                Developed various card games including Whist, Bid Whist, and Euchre, while honing project management skills.
                             </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-fuchsia-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Multiplayer</span>
-                            <span class="bg-yellow-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Causal</span>
-                            <span class="bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Simulation</span>
-                            </div>
-                            <div class="flex justify-end gap-3 mt-auto">
-                            <a href="https://github.com/Vivekkrdutta/Kitchen-Chaos---Again-"
-                                class="text-gray-300 hover:text-fuchsia-400 transition-colors"><i data-lucide="github"></i></a>
-                            <a href="https://thepelicanpresents.itch.io/restaurant"
-                                class="text-gray-300 hover:text-fuchsia-400 transition-colors"><i data-lucide="external-link"></i></a>
-                            </div>
+                            <img src="./Images/Appzitter-Certificate.png" alt="Appzitter Certificate" class="w-28 cursor-pointer rounded shadow-lg hover:scale-105 transition-transform" onclick="openModal('./Images/Appzitter-Certificate.png')">
                         </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3-->
-                    <div class="carousel-slide flex-none w-full max-w-2xl mx-auto px-4 transition-all duration-500">
-                        <div class="card group rounded-2xl overflow-hidden h-full flex flex-col bg-gray-900/40 backdrop-blur-md shadow-lg">
-                        <div class="overflow-hidden">
-                            <img src="https://github.com/Vivekkrdutta/Castle-Light/raw/main/Dungeon%20Assets/dungeon.png"alt="Castle LIght"
-                            class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-2xl font-bold text-white mb-3">Castle Light - Dungeon Assets</h3>
-                            <p class="text-gray-300 mb-4 flex-grow">
-                                A 3d asset pack created with Blender. Low poly style dungeon assets with night-style lighting.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Blender</span>
-                            <span class="bg-violet-600 text-white text-xs font-semibold px-3 py-1 rounded-full">3D Assets</span>
-                            </div>
-                            <div class="flex justify-end gap-3 mt-auto">
-                            <a href="https://github.com/Vivekkrdutta/Castle-Light"
-                                class="text-gray-300 hover:text-fuchsia-400 transition-colors"><i data-lucide="github"></i></a>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 4 -->
-                    <div class="carousel-slide flex-none w-full max-w-2xl mx-auto px-4 transition-all duration-500">
-                        <div class="card group rounded-2xl overflow-hidden h-full flex flex-col bg-gray-900/40 backdrop-blur-md shadow-lg">
-                        <div class="overflow-hidden">
-                            <img src="https://github.com/Vivekkrdutta/Hill-Climb-Racing-3D---Procedural/raw/main/Images/Screenshot%20(261).png"alt="Hill climb"
-                            class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-2xl font-bold text-white mb-3">Hill Climb Racing 3D - Procedural</h3>
-                            <p class="text-gray-300 mb-4 flex-grow">
-                                The classic "Hill Climb Racing" game remapped to its concept 3d version game integrated with Procedural Terrain Generation.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Unity Engine</span>
-                            <span class="bg-violet-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Procedural</span>
-                            </div>
-                            <div class="flex justify-end gap-3 mt-auto">
-                            <a href="https://github.com/Vivekkrdutta/Hill-Climb-Racing-3D---Procedural"
-                                class="text-gray-300 hover:text-fuchsia-400 transition-colors"><i data-lucide="github"></i></a>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-
-                    <!-- Repeat for other slides (Kitchen Chaos, Castle Light, Hill Climb Racing...) -->
-                    <!-- Just make sure each slide has `w-full px-5` so it takes full carousel width -->
-
                     </div>
                 </div>
-
-            </div>      
+            </div>
         </section>
 
-        <!-- Contact Section -->
+        <section id="projects" class="py-24 relative overflow-hidden">
+             <div class="absolute inset-0 z-0">
+                <img src="./Images/backiee-122217-landscape.jpg" alt="Projects Background" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-b from-[#0d0c22] via-[#0d0c22]/60 to-[#0d0c22]"></div>
+            </div>
+            
+            <div class="relative z-10 container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-white text-center mb-16 reveal">Top Projects & Samples</h2>
+                
+                <div id="carousel-container" class="relative max-w-4xl mx-auto reveal">
+                    <div class="overflow-hidden relative">
+                        <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out">
+                            <div class="carousel-slide">
+                                <div class="card group">
+                                    <div class="card-image-container">
+                                        <img src="https://github.com/Vivekkrdutta/Battle-Royal-Polygons/raw/main/Images/Screenshot%20(237).png" alt="Battle Royal : Polygon Edition" class="project-card-image">
+                                    </div>
+                                    <div class="p-6 flex-grow flex flex-col">
+                                        <h3 class="text-2xl font-bold text-white mb-3">Battle Royal : Polygon Edition</h3>
+                                        <p class="text-gray-300 mb-4 flex-grow">A traditional multiplayer Battle Royale game with a unique polygon art style. Ready to play with friends!</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="bg-fuchsia-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Multiplayer</span>
+                                            <span class="bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Action</span>
+                                            <span class="bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Shooting</span>
+                                        </div>
+                                        <div class="flex justify-end gap-3 mt-auto">
+                                            <a href="https://github.com/Vivekkrdutta/Battle-Royal-Polygons" target="_blank" class="text-gray-300 hover:text-fuchsia-400 transition-colors"><i data-lucide="github"></i></a>
+                                            <a href="https://thepelicanpresents.itch.io/battle-royal-polygon-edition" target="_blank" class="text-gray-300 hover:text-fuchsia-400 transition-colors"><i data-lucide="external-link"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="card group">
+                                    <div class="card-image-container">
+                                        <img src="./Images/KitchenChos.png" alt="Kitchen Chaos" class="project-card-image">
+                                    </div>
+                                    <div class="p-6 flex-grow flex flex-col">
+                                        <h3 class="text-2xl font-bold text-white mb-3">Kitchen Chaos - Again</h3>
+                                        <p class="text-gray-300 mb-4 flex-grow">Manage a restaurant and serve customers efficiently in this fun multiplayer simulation game.</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="bg-fuchsia-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Multiplayer</span>
+                                            <span class="bg-yellow-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Casual</span>
+                                            <span class="bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Simulation</span>
+                                        </div>
+                                        <div class="flex justify-end gap-3 mt-auto">
+                                            <a href="https://github.com/Vivekkrdutta/Kitchen-Chaos---Again-" target="_blank" class="text-gray-300 hover:text-fuchsia-400 transition-colors"><i data-lucide="github"></i></a>
+                                            <a href="https://thepelicanpresents.itch.io/restaurant" target="_blank" class="text-gray-300 hover:text-fuchsia-400 transition-colors"><i data-lucide="external-link"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="carousel-slide">
+                                <div class="card group">
+                                    <div class="card-image-container">
+                                        <img src="https://github.com/Vivekkrdutta/Castle-Light/raw/main/Dungeon%20Assets/dungeon.png" alt="Castle Light" class="project-card-image">
+                                    </div>
+                                    <div class="p-6 flex-grow flex flex-col">
+                                        <h3 class="text-2xl font-bold text-white mb-3">Castle Light - Dungeon Assets</h3>
+                                        <p class="text-gray-300 mb-4 flex-grow">A 3D asset pack created with Blender, featuring low-poly style dungeon assets with atmospheric lighting.</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="bg-orange-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Blender</span>
+                                            <span class="bg-violet-600 text-white text-xs font-semibold px-3 py-1 rounded-full">3D Assets</span>
+                                        </div>
+                                        <div class="flex justify-end gap-3 mt-auto">
+                                            <a href="https://github.com/Vivekkrdutta/Castle-Light" target="_blank" class="text-gray-300 hover:text-fuchsia-400 transition-colors"><i data-lucide="github"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="card group">
+                                    <div class="card-image-container">
+                                        <img src="https://github.com/Vivekkrdutta/Hill-Climb-Racing-3D---Procedural/raw/main/Images/Screenshot%20(261).png" alt="Hill Climb Racing 3D" class="project-card-image">
+                                    </div>
+                                    <div class="p-6 flex-grow flex flex-col">
+                                        <h3 class="text-2xl font-bold text-white mb-3">Hill Climb Racing 3D - Procedural</h3>
+                                        <p class="text-gray-300 mb-4 flex-grow">A 3D reimagining of the classic "Hill Climb Racing" game, integrated with procedural terrain generation.</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Unity</span>
+                                            <span class="bg-violet-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Procedural</span>
+                                        </div>
+                                        <div class="flex justify-end gap-3 mt-auto">
+                                            <a href="https://github.com/Vivekkrdutta/Hill-Climb-Racing-3D---Procedural" target="_blank" class="text-gray-300 hover:text-fuchsia-400 transition-colors"><i data-lucide="github"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="prev-btn" class="carousel-btn left-2 md:-left-4">
+                        <i data-lucide="chevron-left" class="w-8 h-8"></i>
+                    </button>
+                    <button id="next-btn" class="carousel-btn right-2 md:-right-4">
+                        <i data-lucide="chevron-right" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
         <section id="contact" class="py-24 bg-black/20">
             <div class="container mx-auto px-8 text-center reveal">
                 <h2 class="text-4xl font-bold text-white mb-4">Let's Build Worlds Together</h2>
@@ -509,18 +243,18 @@
                 <form id="contact-form" class="max-w-xl mx-auto text-left">
                     <div class="mb-6">
                         <label for="user_name" class="block mb-2 text-sm font-medium text-gray-300">Your Name</label>
-                        <input type="text" id="user_name" name="user_name" class="bg-gray-900/50 border border-gray-600 text-white text-sm rounded-lg focus:ring-fuchsia-500 focus:border-fuchsia-500 block w-full sm:w-[500px] p-3" placeholder="John Doe" required>
-                    </div>                    
+                        <input type="text" id="user_name" name="user_name" class="bg-gray-900/50 border border-gray-600 text-white text-sm rounded-lg focus:ring-fuchsia-500 focus:border-fuchsia-500 block w-full p-3 transition-colors" placeholder="John Doe" required>
+                    </div>
                     <div class="mb-6">
                         <label for="user_email" class="block mb-2 text-sm font-medium text-gray-300">Your Email</label>
-                        <input type="email" id="user_email" name="user_email" class="bg-gray-900/50 border border-gray-600 text-white text-sm rounded-lg focus:ring-fuchsia-500 focus:border-fuchsia-500 block w-full sm:w-[500px] p-3" placeholder="name@email.com" required>
+                        <input type="email" id="user_email" name="user_email" class="bg-gray-900/50 border border-gray-600 text-white text-sm rounded-lg focus:ring-fuchsia-500 focus:border-fuchsia-500 block w-full p-3 transition-colors" placeholder="name@email.com" required>
                     </div>
                     <div class="mb-6">
                         <label for="message" class="block mb-2 text-sm font-medium text-gray-300">Your Message</label>
-                        <textarea id="message" name="message" rows="4" class="bg-gray-900/50 border border-gray-600 text-white text-sm rounded-lg focus:ring-fuchsia-500 focus:border-fuchsia-500 block w-full sm:w-[500px] p-3" placeholder="Let's create something amazing..." required></textarea>
+                        <textarea id="message" name="message" rows="4" class="bg-gray-900/50 border border-gray-600 text-white text-sm rounded-lg focus:ring-fuchsia-500 focus:border-fuchsia-500 block w-full p-3 transition-colors" placeholder="Let's create something amazing..." required></textarea>
                     </div>
                     <div class="text-center">
-                         <button type="submit" class="accent-gradient text-white font-bold py-3 px-8 rounded-full text-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-fuchsia-500/40 w-full sm:w-auto">
+                        <button type="submit" class="accent-gradient text-white font-bold py-3 px-8 rounded-full text-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-fuchsia-500/40 w-full sm:w-auto">
                             Send Message
                         </button>
                     </div>
@@ -530,202 +264,26 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="py-8">
         <div class="container mx-auto px-6 text-center text-gray-500">
             <div class="flex justify-center space-x-6 mb-4">
-                <a href="https://www.linkedin.com/in/vivekkumardutta03/" class="hover:text-fuchsia-400 transition-colors"><i data-lucide="linkedin"></i></a>
-                <a href="https://github.com/Vivekkrdutta" class="hover:text-fuchsia-400 transition-colors"><i data-lucide="github"></i></a>
-                <a href="https://www.youtube.com/@ThePelicanPresents" class="hover:text-fuchsia-400 transition-colors"><i data-lucide="youtube"></i></a>
-                <a href="https://thepelicanpresents.itch.io/" class="hover:text-fuchsia-400 transition-colors"><i data-lucide="gamepad"></i></a> <!-- using gamepad for itch.io -->
+                <a href="https://www.linkedin.com/in/vivekkumardutta03/" target="_blank" class="hover:text-fuchsia-400 transition-colors"><i data-lucide="linkedin"></i></a>
+                <a href="https://github.com/Vivekkrdutta" target="_blank" class="hover:text-fuchsia-400 transition-colors"><i data-lucide="github"></i></a>
+                <a href="https://www.youtube.com/@ThePelicanPresents" target="_blank" class="hover:text-fuchsia-400 transition-colors"><i data-lucide="youtube"></i></a>
+                <a href="https://thepelicanpresents.itch.io/" target="_blank" class="hover:text-fuchsia-400 transition-colors"><i data-lucide="gamepad"></i></a>
             </div>
             <p>&copy; <span id="year"></span> Vivek Kumar Dutta. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script type="text/javascript"
+    <div id="certModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-[100]">
+        <span class="absolute top-5 right-8 text-white text-5xl cursor-pointer" onclick="closeModal()">&times;</span>
+        <img id="modalImg" src="" alt="Certificate" class="max-h-[90%] max-w-[90%] rounded shadow-2xl">
+    </div>
 
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-
-</script>
-
-<script type="text/javascript">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
-        (function(){
-            const public_Key = "TZHv1_n-uOxtBR0bu";
-            emailjs.init({
-                publicKey: public_Key,
-            });
-        })();
-
-    </script>
-
-    <script>
-
-        // Email services
-        const public_Key = "TZHv1_n-uOxtBR0bu";
-        const templateId = "template_e28n19p";
-        const serviceId = "service_fjhuds4";
-
-        const form = document.getElementById("contact-form");
-        const feedback = document.getElementById("form-feedback");
-
-        form.addEventListener("submit", async function(e) {
-            e.preventDefault(); // Prevent default form submission
-
-            try{
-                await emailjs.send(serviceId, templateId, {
-
-                    name: document.getElementById("user_name").value,
-                    message: document.getElementById("message").value,
-                    email: document.getElementById("user_email").value,
-                });
-
-                feedback.textContent = "✅ Message sent successfully!";
-                feedback.classList.add("text-green-400");
-                form.reset();
-            }
-            catch(error){
-
-                feedback.textContent = "❌ Failed to send message. Try again later.";
-                feedback.classList.add("text-red-400");
-                console.error("EmailJS error:", error);
-            }
-        });
-        
-        // LUCIDE ICONS
-        lucide.createIcons();
-
-        // MOBILE MENU
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-        });
-
-        // HEADER SCROLL EFFECT
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('bg-slate-900/80', 'backdrop-blur-sm', 'shadow-lg');
-            } else {
-                header.classList.remove('bg-slate-900/80', 'backdrop-blur-sm', 'shadow-lg');
-            }
-        });
-
-        // HERO TYPING EFFECT
-        const typedTextSpan = document.getElementById("typed-text");
-        const textArray = ["Game Developer", "Programmer", "Creative Coder"];
-        const typingDelay = 100, erasingDelay = 50, newTextDelay = 2000;
-        let textArrayIndex = 0, charIndex = 0;
-        function type() {
-            if (charIndex < textArray[textArrayIndex].length) {
-                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-                charIndex++;
-                setTimeout(type, typingDelay);
-            } else { setTimeout(erase, newTextDelay); }
-        }
-        function erase() {
-            if (charIndex > 0) {
-                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
-                charIndex--;
-                setTimeout(erase, erasingDelay);
-            } else {
-                textArrayIndex++;
-                if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-                setTimeout(type, typingDelay + 1100);
-            }
-        }
-        document.addEventListener("DOMContentLoaded", function() {
-            if(textArray.length) setTimeout(type, newTextDelay + 250);
-        });
-
-        // SCROLL REVEAL
-        const revealElements = document.querySelectorAll('.reveal');
-        const revealOnScroll = () => {
-            const windowHeight = window.innerHeight;
-            revealElements.forEach(el => {
-                const elementTop = el.getBoundingClientRect().top;
-                if (elementTop < windowHeight - 100) el.classList.add('visible');
-            });
-        };
-        window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll();
-
-        // FOOTER YEAR
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Modal Popup
-        function openModal(imgSrc) {
-            document.getElementById("modalImg").src = imgSrc;
-            document.getElementById("certModal").classList.remove("hidden");
-            document.getElementById("certModal").classList.add("flex");
-        }
-
-        function closeModal() {
-            document.getElementById("certModal").classList.add("hidden");
-            document.getElementById("certModal").classList.remove("flex");
-        }
-
-       // CAROUSEL effect
-    document.addEventListener('DOMContentLoaded', function () {
-        const track = document.getElementById('carousel-track');
-        const slides = Array.from(track.children);
-        const nextButton = document.getElementById('next-btn');
-        const prevButton = document.getElementById('prev-btn');
-
-        let currentIndex = 0;
-
-        function updateCarousel() {
-            const slideWidth = track.clientWidth;
-            const newTransform = -currentIndex * slideWidth;
-            track.style.transform = `translateX(${newTransform}px)`;
-
-            slides.forEach((slide, index) => {
-                if (index === currentIndex) {
-                    slide.style.transform = "scale(1)";
-                    slide.style.opacity = "1";
-                } else if (index === currentIndex - 1 || index === currentIndex + 1) {
-                    slide.style.transform = "scale(0.85)";
-                    slide.style.opacity = "0.6";
-                } else {
-                    slide.style.transform = "scale(0.7)";
-                    slide.style.opacity = "0.3";
-                }
-            });
-
-            prevButton.disabled = currentIndex === 0;
-            nextButton.disabled = currentIndex === slides.length - 1;
-        }
-
-
-        nextButton.addEventListener('click', () => {
-            if (currentIndex < slides.length - 1) {
-                currentIndex++;
-                updateCarousel();
-            }
-        });
-
-        prevButton.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-            }
-        });
-
-        window.addEventListener('resize', updateCarousel);
-
-        // Initial setup
-        updateCarousel();
-
-        if (typeof lucide !== 'undefined') {
-            lucide.createIcons();
-        }
-    });
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
