@@ -1,0 +1,125 @@
+/* --- Global Styles & Fonts --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0d0c22; /* Deep Indigo background */
+    color: #d1d5db;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Utility Classes --- */
+.accent-gradient {
+    background: linear-gradient(90deg, #c026d3, #7c3aed);
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #f0abfc, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- Hero Section --- */
+.hero-bg {
+    background-image: linear-gradient(to bottom, rgba(13, 12, 34, 0.606), rgba(13, 12, 34, 0.457) 70%, rgba(13,12,34,1)),
+                      url('./Images/backiee-298122-landscape.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-bg-layer {
+    transition: transform 1s ease;
+}
+
+.typed-cursor {
+    opacity: 1;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* --- Project Cards & Carousel --- */
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(192, 38, 211, 0.1);
+}
+
+.card-image-container {
+    overflow: hidden;
+    height: 350px;
+}
+
+.project-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.group:hover .project-card-image {
+    transform: scale(1.05);
+}
+
+/* --- Carousel Specific Styles --- */
+.carousel-slide {
+    flex: 0 0 100%;
+    padding: 0 1rem; /* Spacing between slides */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(192, 38, 211, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    z-index: 20;
+}
+
+.carousel-btn:hover:not(:disabled) {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 15px rgba(225, 0, 255, 0.4);
+    background: rgba(192, 38, 211, 0.8);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* --- Scroll Reveal Animation --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
